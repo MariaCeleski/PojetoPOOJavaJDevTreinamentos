@@ -2,8 +2,6 @@ package cursojava.executavel;
 
 import javax.swing.JOptionPane;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
-
 import cursojava.classes.Aluno;
 
 public class PrimeiraClasseJava {
