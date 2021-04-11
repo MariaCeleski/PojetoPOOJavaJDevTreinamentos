@@ -23,11 +23,16 @@ public class PrimeiraClasseJava {
 		String nomeMae = JOptionPane.showInputDialog("Qual o nome da mãe do aluno");
 		String nomePai = JOptionPane.showInputDialog("Qual o nome do pai do aluno");
 		String nomeEscola = JOptionPane.showInputDialog("Qual o nome da escola aluno");
+		
 		String dataMatricula = JOptionPane.showInputDialog("Qual a data de matrícula do aluno");
 		String serieMatriculado = JOptionPane.showInputDialog("Qual a serie matriculado do aluno");
+		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1? ");
 		String note1 = JOptionPane.showInputDialog("Nota 1 ");
+		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2? ");
 		String note2 = JOptionPane.showInputDialog("Nota 2 ");
+		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3? ");
 		String note3 = JOptionPane.showInputDialog("Nota 3 ");
+		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4? ");
 		String note4 = JOptionPane.showInputDialog("Nota 4 ");
 		
 		Aluno aluno1 = new Aluno();//Aqui será o João / (new aluno) é uma instância
@@ -40,6 +45,10 @@ public class PrimeiraClasseJava {
 		aluno1.setNomeMae(nomeMae);
 		aluno1.setNomePai(nomePai);
 		aluno1.setNomeEscola(nomeEscola);
+		aluno1.setDisciplina1(disciplina1);
+		aluno1.setDisciplina2(disciplina2);
+		aluno1.setDisciplina3(disciplina3);
+		aluno1.setDisciplina4(disciplina4);		
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setSerieMatriculado(serieMatriculado);
 		aluno1.setNota1(Double.parseDouble(note1));
@@ -51,6 +60,11 @@ public class PrimeiraClasseJava {
 		System.out.println(aluno1.toString());/*Descrição do objeto na memória*/
 		System.out.println("Média do aluno = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
+		
+			
+		
+						
+		
 		
 		/*----------------------------------------------------------------------------------*/
 		
@@ -70,7 +84,6 @@ public class PrimeiraClasseJava {
 		
 		
 		
-
 		
 		System.out.println("=================================================");
 		
@@ -148,12 +161,7 @@ public class PrimeiraClasseJava {
 		
 		/*Aluno aluno5 = new Aluno("José, 50");*/
 		
-		
-		
-		
-		
-		
-				
+					
 				
 	}
 }
