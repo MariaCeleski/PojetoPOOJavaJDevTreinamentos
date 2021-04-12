@@ -43,16 +43,19 @@ public class PrimeiraClasseJava {
 		aluno1.setNomeMae(nomeMae);
 		aluno1.setNomePai(nomePai);
 		aluno1.setNomeEscola(nomeEscola);
-		aluno1.setDisciplina1(disciplina1);
-		aluno1.setDisciplina2(disciplina2);
-		aluno1.setDisciplina3(disciplina3);
-		aluno1.setDisciplina4(disciplina4);		
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setSerieMatriculado(serieMatriculado);
-		aluno1.setNota1(Double.parseDouble(note1));
-		aluno1.setNota2(Double.parseDouble(note2));
-		aluno1.setNota3(Double.parseDouble(note3));
-		aluno1.setNota4(Double.parseDouble(note4));
+		
+		aluno1.getDisciplina().setDisciplina1(disciplina1);
+		aluno1.getDisciplina().setDisciplina2(disciplina2);
+		aluno1.getDisciplina().setDisciplina3(disciplina3);
+		aluno1.getDisciplina().setDisciplina4(disciplina4);		
+		
+		
+		aluno1.getDisciplina().setNota1(Double.parseDouble(note1));
+		aluno1.getDisciplina().setNota2(Double.parseDouble(note2));
+		aluno1.getDisciplina().setNota3(Double.parseDouble(note3));
+		aluno1.getDisciplina().setNota4(Double.parseDouble(note4));
 		
 		
 		System.out.println(aluno1.toString());/*Descrição do objeto na memória*/
