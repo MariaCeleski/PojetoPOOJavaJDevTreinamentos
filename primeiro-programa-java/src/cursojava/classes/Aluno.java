@@ -1,5 +1,8 @@
 package cursojava.classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*esta é a classe/objeo que representa aluno*/
 
 public class Aluno {
@@ -15,17 +18,15 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 	
-	private Disciplina disciplina = new Disciplina();
-	public void setDisciplina(Disciplina disciplina) {
+	private List<Disciplina> disciplina = new ArrayList<Disciplina>();
+	
+	public void setDisciplina(List<Disciplina> disciplina) {
 		this.disciplina = disciplina;
 	}
-	
-	public Disciplina getDisciplina() {
+		
+	public List<Disciplina> getDisciplina() {
 		return disciplina;
 	}
-	
-	
-	
 		
 	public Aluno() {/*cria os dados na memória*/
 		// TODO Auto-generated constructor stub
@@ -124,8 +125,7 @@ public class Aluno {
 		
 	/*Método que retorna a média do aluno*/
 	public double getMediaNota() {
-		return (disciplina.getNota1()+ disciplina.getNota2()+ 
-				disciplina.getNota3()+ disciplina.getNota4())/4;
+		return 0;
 	}
 	/*Método que retorna True para aprovado e False para Reprovado*/
 	public boolean getAlunoAprovado() {
@@ -153,7 +153,7 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", disciplina=" + disciplina + "]";
+				+ serieMatriculado + "]";
 	}
 
 	@Override
