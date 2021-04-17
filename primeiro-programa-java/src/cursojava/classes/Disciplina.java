@@ -1,5 +1,5 @@
 package cursojava.classes;
-
+/*Essa classe Disciplina servirá para todos os objetos e instancias de notas e materiais*/
 public class Disciplina {
 
 	private double nota;

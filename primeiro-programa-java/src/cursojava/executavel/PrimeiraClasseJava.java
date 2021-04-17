@@ -3,6 +3,7 @@ package cursojava.executavel;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Disciplina;
 
 public class PrimeiraClasseJava {
 	/*Main é um método auto executável em Java*/
@@ -24,14 +25,7 @@ public class PrimeiraClasseJava {
 		
 		String dataMatricula = JOptionPane.showInputDialog("Qual a data de matrícula do aluno");
 		String serieMatriculado = JOptionPane.showInputDialog("Qual a serie matriculado do aluno");
-		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1? ");
-		String note1 = JOptionPane.showInputDialog("Nota 1 ");
-		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2? ");
-		String note2 = JOptionPane.showInputDialog("Nota 2 ");
-		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3? ");
-		String note3 = JOptionPane.showInputDialog("Nota 3 ");
-		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4? ");
-		String note4 = JOptionPane.showInputDialog("Nota 4 ");
+		
 		
 		Aluno aluno1 = new Aluno();//Aqui será o João / (new aluno) é uma instância
 		
@@ -46,12 +40,36 @@ public class PrimeiraClasseJava {
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setSerieMatriculado(serieMatriculado);
 		
-				
+			
+			
+		Disciplina disciplina1 = new Disciplina();
+		disciplina1.setDisciplina("Banco de dados");
+		disciplina1.setNota(90);
+		
+		aluno1.getDisciplinas().add(disciplina1);
+		
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("Matemática");
+		disciplina2.setNota(80);
+		
+		aluno1.getDisciplinas().add(disciplina2);
+		
+		Disciplina disciplina3 = new Disciplina();
+		disciplina3.setDisciplina("Geografia");
+		disciplina3.setNota(74);
+		
+		aluno1.getDisciplinas().add(disciplina3);
+		
+		Disciplina disciplina4 = new Disciplina();
+		disciplina4.setDisciplina("Java Web");
+		disciplina4.setNota(97);
+		
+		aluno1.getDisciplinas().add(disciplina4);
+		
 		System.out.println(aluno1.toString());/*Descrição do objeto na memória*/
 		System.out.println("Média do aluno = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
 				
-			
 		
 		
 		/*----------------------------------------------------------------------------------*/

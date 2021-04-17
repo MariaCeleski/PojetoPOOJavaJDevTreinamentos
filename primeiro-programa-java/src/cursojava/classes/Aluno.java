@@ -3,7 +3,7 @@ package cursojava.classes;
 import java.util.ArrayList;
 import java.util.List;
 
-/*esta é a classe/objeo que representa aluno*/
+/*esta é a classe/objeto que representa aluno*/
 
 public class Aluno {
 /*esses são os atributos da classe do Aluno, caracteristicas da lista*/
@@ -18,14 +18,14 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 	
-	private List<Disciplina> disciplina = new ArrayList<Disciplina>();
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
-	public void setDisciplina(List<Disciplina> disciplina) {
-		this.disciplina = disciplina;
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 		
-	public List<Disciplina> getDisciplina() {
-		return disciplina;
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
 		
 	public Aluno() {/*cria os dados na memória*/
@@ -125,7 +125,14 @@ public class Aluno {
 		
 	/*Método que retorna a média do aluno*/
 	public double getMediaNota() {
-		return 0;
+		
+		double somaNotas = 0.0;
+		
+		for (Disciplina disciplina:disciplinas) {
+		
+			somaNotas += disciplina.getNota();
+		}
+		return somaNotas/disciplinas.size();
 	}
 	/*Método que retorna True para aprovado e False para Reprovado*/
 	public boolean getAlunoAprovado() {
