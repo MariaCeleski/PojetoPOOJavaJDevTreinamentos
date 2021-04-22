@@ -40,32 +40,24 @@ public class PrimeiraClasseJava {
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setSerieMatriculado(serieMatriculado);
 		
+		for (int pos = 1; pos <= 4; pos++) {	
+			String nomeDisciplina = JOptionPane.showInputDialog("Qual é a discipina "+pos+"?");	
+			String notaDisciplina = JOptionPane.showInputDialog("Qual é a nota dessa disciplina "+pos+"?");
 			
+			Disciplina disciplina=new Disciplina();
+			disciplina.setDisciplina(nomeDisciplina);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
 			
-		Disciplina disciplina1 = new Disciplina();
-		disciplina1.setDisciplina("Banco de dados");
-		disciplina1.setNota(90);
+			aluno1.getDisciplinas().add(disciplina);
+		}
 		
-		aluno1.getDisciplinas().add(disciplina1);
-		
-		Disciplina disciplina2 = new Disciplina();
-		disciplina2.setDisciplina("Matemática");
-		disciplina2.setNota(80);
-		
-		aluno1.getDisciplinas().add(disciplina2);
-		
-		Disciplina disciplina3 = new Disciplina();
-		disciplina3.setDisciplina("Geografia");
-		disciplina3.setNota(74);
-		
-		aluno1.getDisciplinas().add(disciplina3);
-		
-		Disciplina disciplina4 = new Disciplina();
-		disciplina4.setDisciplina("Java Web");
-		disciplina4.setNota(97);
-		
-		aluno1.getDisciplinas().add(disciplina4);
-		
+		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+		if(escolha == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2 ,3 ou 4? ");
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()-1);
+		}
+	
+				
 		System.out.println(aluno1.toString());/*Descrição do objeto na memória*/
 		System.out.println("Média do aluno = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
@@ -74,98 +66,7 @@ public class PrimeiraClasseJava {
 		
 		/*----------------------------------------------------------------------------------*/
 		
-		/*System.out.println("Nome é: " + aluno1.getNome());		
-		System.out.println("Idade é: " + aluno1.getIdade());
-		System.out.println("Data de nascimento é: " + aluno1.getDataNascimento());
-		System.out.println("Registro geral(RG)é: " + aluno1.getRegistroGeral());
-		System.out.println("Numero CPF é: " + aluno1.getNumeroCpf());
-		System.out.println("Nome da mãe é: " + aluno1.getNomeMae());
-		System.out.println("Nome do pai é: " + aluno1.getNomePai());
-		System.out.println("Nome da Escola é: " + aluno1.getNomeEscola());
-		System.out.println("Data da matrícula é: " + aluno1.getDataMatricula());
-		System.out.println("Série é: " + aluno1.getSerieMatriculado());
-		System.out.println("Média da nota é: " + aluno1.getMediaNota());
-		System.out.println("Resutado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
-		System.out.println("Resultado 2: " + aluno1.getAlunoAprovado2());
 		
-		
-		
-		
-		System.out.println("=================================================");
-		
-		
-		/*Aluno aluno2 = new Aluno();//Aqui será o Pedro*/
-		
-		/*aluno2.setNome("Pedro Ramon");
-		aluno2.setIdade(40);
-		aluno2.setDataNascimento("14/10/1990");
-		aluno2.setRegistroGeral("44488555");
-		aluno2.setNumeroCpf("125481555-00");
-		aluno2.setNomeMae("Marta");
-		aluno2.setNomePai("Joel");
-		aluno2.setNomeEscola("Cesusc");
-		aluno2.setDataMatricula("12/08/2000");
-		aluno2.setSerieMatriculado("8A");
-		aluno2.setNota1(90);
-		aluno2.setNota2(70.8);
-		aluno2.setNota3(70.9);
-		aluno2.setNota4(90.7);
-		
-		/*----------------------------------------------------------------------------------*/
-		
-		/*System.out.println("nome é: " + aluno2.getNome());		
-		System.out.println("Idade é: " + aluno2.getIdade());
-		System.out.println("Data de nascimento é: " + aluno2.getDataNascimento());
-		System.out.println("Registro é: " + aluno2.getRegistroGeral());
-		System.out.println("Numero CPF é: " + aluno2.getNumeroCpf());
-		System.out.println("Nome da mãe é: " + aluno2.getNomeMae());
-		System.out.println("Nome do pai é: " + aluno2.getNomePai());
-		System.out.println("Nome da Escola é: " + aluno2.getNomeEscola());
-		System.out.println("Data da matrícula é: " + aluno2.getDataMatricula());
-		System.out.println("Série é: " + aluno2.getSerieMatriculado());
-		System.out.println("Média da nota é: " + aluno2.getMediaNota());
-
-		
-		System.out.println("=================================================");
-		
-		Aluno aluno3 = new Aluno();//Aqui será o Alex*/
-		
-		/*aluno3.setNome("Alex Victor");
-		aluno3.setIdade(30);
-		aluno3.setDataNascimento("24/06/1990");
-		aluno3.setRegistroGeral("6599998555");
-		aluno3.setNumeroCpf("125488885-00");
-		aluno3.setNomeMae("Maria");
-		aluno3.setNomePai("Eliseu");
-		aluno3.setNomeEscola("Cesusc");
-		aluno3.setDataMatricula("12/08/2010");
-		aluno3.setSerieMatriculado("8A");
-		aluno3.setNota1(90);
-		aluno3.setNota2(50.8);
-		aluno3.setNota3(70.9);
-		aluno3.setNota4(60.7);
-		
-		/*----------------------------------------------------------------------------------*/
-		
-		/*System.out.println("nome é: " + aluno3.getNome());		
-		System.out.println("Idade é: " + aluno3.getIdade());
-		System.out.println("Data de nascimento é: " + aluno3.getDataNascimento());
-		System.out.println("Registro é: " + aluno3.getRegistroGeral());
-		System.out.println("Numero CPF é: " + aluno3.getNumeroCpf());
-		System.out.println("Nome da mãe é: " + aluno3.getNomeMae());
-		System.out.println("Nome do pai é: " + aluno3.getNomePai());
-		System.out.println("Nome da Escola é: " + aluno3.getNomeEscola());
-		System.out.println("Data da matrícula é: " + aluno3.getDataMatricula());
-		System.out.println("Série é: " + aluno3.getSerieMatriculado());
-		System.out.println("Média da nota é: " + aluno3.getMediaNota());*/
-
-		
-		/*System.out.println("=================================================");*/
-
-		
-		/*Aluno aluno4 = new Aluno("Maria");
-		
-		/*Aluno aluno5 = new Aluno("José, 50");*/
 		
 					
 				
