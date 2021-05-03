@@ -52,11 +52,20 @@ public class PrimeiraClasseJava {
 		}
 		
 		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
-		if(escolha == 0) {
+		
+		if(escolha == 0) {/*opção SIM é zero(0)*/
+			
+			int continuarRemover = 0;
+			int posicao = 1;
+			
+			while(continuarRemover == 0){
 			String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2 ,3 ou 4? ");
-			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()-1);
-		}
-	
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()-posicao);
+			posicao ++;/*++ soma +1*/
+			continuarRemover = JOptionPane.showConfirmDialog(null, "Deseja continuar remover disciplina?");
+			
+			}
+		}	
 				
 		System.out.println(aluno1.toString());/*Descrição do objeto na memória*/
 		System.out.println("Média do aluno = " + aluno1.getMediaNota());
